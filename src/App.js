@@ -8,14 +8,15 @@ import { Provider } from "react-redux";
 
 import Light from "./themes/Ligth";
 import store from "./store/reducers/store";
-import { Loading } from "./components/Loading";
+import { Loading, Notify } from "./components";
 
 
 
 const App = () => (
   <Provider store={store}>
     <ThemeProvider theme={Light}>
-      <Loading/>
+      <Loading />
+      <Notify />
       <BrowserRouter>
         <AppRoutes />
       </BrowserRouter>
