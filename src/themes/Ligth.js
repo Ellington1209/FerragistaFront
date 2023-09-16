@@ -1,5 +1,6 @@
 import { createTheme } from "@mui/material";
-import { indigo } from "@mui/material/colors";
+import { indigo, grey } from "@mui/material/colors";
+
 
 const Ligth = createTheme({
     palette: {
@@ -8,7 +9,13 @@ const Ligth = createTheme({
             light: indigo[200],
             dark: indigo[900],
             contrastText: '#fff'
-        }    
+        },
+        secondary:{
+            main: grey[500],
+            light: grey[200],
+            dark: grey[900],
+            contrastText: '#fff'
+        }
     },
 })
 
