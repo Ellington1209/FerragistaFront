@@ -1,6 +1,6 @@
 import React from 'react'
 import { changeNotify } from '../../store/actions/notify.actions';
-import { Snackbar, SnackbarContent } from '@mui/material';
+import { Snackbar, SnackbarContent, Typography } from '@mui/material';
 import { createUseStyles } from 'react-jss';
 import { green, red } from '@mui/material/colors';
 import { useDispatch, useSelector } from 'react-redux';
@@ -30,8 +30,8 @@ export default function Notify() {
         >
             <SnackbarContent
                 className={`${classes[notify.class]} d-flex justify-content-center`}
-                message={
-                    <span className='d-flex align-items-center'>{notify.msg}</span>
+                message={                   
+                    <Typography display='flex' align='center'>{notify.msg}</Typography>
                 }
             />
         </Snackbar>

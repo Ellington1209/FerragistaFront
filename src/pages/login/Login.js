@@ -1,4 +1,6 @@
 
+import {  useDispatch } from "react-redux";
+import {  useNavigate } from 'react-router-dom';
 import { Box, Button, Card, CardContent, CardMedia, TextField, Typography } from '@mui/material'
 // react hook form
 import { useForm } from "react-hook-form"
@@ -7,6 +9,8 @@ import * as yup from "yup"
 
 
 import Logo from "../../image/logomarca.png"
+import { login } from '../../store/actions/auth.actions';
+import { changeNotify } from "../../store/actions/notify.actions";
 
 const schema = yup
   .object({
@@ -16,12 +20,23 @@ const schema = yup
 
 export default function Login() {
 
-
     const { register, handleSubmit: onSubmit,  formState: { errors }, } = useForm({resolver:yupResolver(schema)});
+    const navigate = useNavigate();
 
-    const handleSubmit = (data) => {
-        console.log(data)
-    };
+    const dispatch = useDispatch();
+    //função que faz o login, pega de action.auth a função login e recebe as credenciais.
+    const handleSubmit = (credentials) => {
+        dispatch(login(credentials))
+        .then(()=>{
+           
+            navigate("/dashboard")// Redirecionando o usuário para a rota /dashboard usando navigate
+            dispatch(changeNotify({
+                open: true,
+                class: "success",
+                msg: "Seja Bem Vindo!"
+            }))
+        })  
+    }
 
 
 
@@ -35,7 +50,7 @@ export default function Login() {
                             component="img"
                             height={150}
                             image={Logo}
-                            alt="logo tipo"
+                            alt="logo"
                             sx={{ marginLeft: "40px" }}
 
                         />
@@ -43,19 +58,17 @@ export default function Login() {
                             <Box display="flex" flexDirection="column" width={300}>
                                 <Box marginTop="20px">
                                     <TextField
-
                                         label="Email"
                                         type="email"                                      
                                         fullWidth
                                         {...register("username")}
-                                      
+                                        autoComplete='email'
                                     />
                                      <Typography color='red'>{errors?.username?.message}</Typography>
                                 </Box>
 
                                 <Box marginTop="20px">
                                     <TextField
-
                                         label="Senha"
                                         type="password"                                       
                                         fullWidth
@@ -75,4 +88,5 @@ export default function Login() {
 
         </Box>
     )
+
 }
