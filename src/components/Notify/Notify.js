@@ -9,8 +9,8 @@ import { useDispatch, useSelector } from 'react-redux';
 export default function Notify() {
     const dispatch = useDispatch();
     const notify = useSelector(state => state.notifyReducer);
-    const classes =  createUseStyles({
-        success:{
+    const classes = createUseStyles({
+        success: {
             backgroundColor: green[500]
         },
         error: {
@@ -22,15 +22,15 @@ export default function Notify() {
         <Snackbar
             anchorOrigin={{
                 horizontal: "center",
-                vertical: notify.vertical            
+                vertical: notify.vertical
             }}
             open={notify.open}
             autoHideDuration={notify.time}
-            onClose={() => dispatch( changeNotify({open: false}))}
+            onClose={() => dispatch(changeNotify({ open: false }))}
         >
             <SnackbarContent
                 className={`${classes[notify.class]} d-flex justify-content-center`}
-                message={                   
+                message={
                     <Typography display='flex' align='center'>{notify.msg}</Typography>
                 }
             />
