@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Typography, IconButton, Toolbar, Box, Tooltip, Avatar, Menu, MenuItem, Button,}from "@mui/material";
+import { Typography, IconButton, Toolbar, Box, Tooltip, Avatar, Menu, MenuItem, }from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { Container, BoxAvatar } from "./Styles";
 import { styled } from "@mui/material/styles";

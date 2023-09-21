@@ -8,7 +8,7 @@ export const Container = styled.div`
   }
 
 .name{
-  color:rgba(208, 210, 214, 1);
+  
   padding-left: 15px;
  ;
 }
@@ -20,22 +20,15 @@ export const Container = styled.div`
       font-size: 22px;
      
     }
-    .MuiButtonBase-root{
-      color:rgba(208, 210, 214, 1);
-    }
+  
     .MuiButtonBase-root:hover{
       color: ${grey[100]}
     }
 
-    .MuiDivider-root {
-      background-color: #FFFFFF;
-      width: 90%;
-      margin-left: 5%;
-    }
 
-    .MuiTypography-root {
-      font-size: 17px;
-      
+    .MuiTypography-body1 {
+      font-size: 19px;
+      color: #fff;
     }
 
     .MuiListItemIcon-root {

@@ -24,6 +24,8 @@ export default function Login() {
     const navigate = useNavigate();
 
     const dispatch = useDispatch();
+
+    
     //função que faz o login, pega de action.auth a função login e recebe as credenciais.
     const handleSubmit = (credentials) => {
         dispatch(login(credentials))

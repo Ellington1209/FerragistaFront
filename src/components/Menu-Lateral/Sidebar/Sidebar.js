@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 import * as React from "react";
 import {Drawer, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Box, styled, Collapse,} from "@mui/material";
-import { ExpandLess, ExpandMore, Home, Warehouse } from "@mui/icons-material";
+import { ExpandLess, ExpandMore, Home, Inventory,  } from "@mui/icons-material";
 import { indigo } from '@mui/material/colors';
 
 
@@ -18,15 +18,15 @@ const perfilUsuario = {
       isSubmenu: false,
     },
     {
-      name: "Almoxerifado",
+      name: "Estoque",
 
-      icon: Warehouse,
+      icon: Inventory,
       route: "#",
       isSubmenu: true,
       submenu: [
         {
-          name: "teste",
-          submenuRoute: "/programacao/atividades",
+          name: "Produtos",
+          submenuRoute: "/produtos",
         },
 
         {
@@ -99,7 +99,7 @@ const Sidebar = (props) => {
         </div>
       </DrawerHeader>
       <Box sx={{ overflow: "auto" }}>
-        <List>
+        <List key="list">
           {perfilUsuario[perfil].map((p, index) => {
             const IconComponent = NewHOC(p.icon);
 
@@ -127,7 +127,8 @@ const Sidebar = (props) => {
                 {p.isSubmenu &&
                   p.submenu.map((menu) => {
                     return (
-                      <Collapse
+                      <Collapse    key={menu.name}
+
                         in={isExpand === index}
                         timeut="auto"
                         unmountOnExit
