@@ -30,8 +30,8 @@ const perfilUsuario = {
         },
 
         {
-          name: "teste",
-          submenuRoute: "/programacao/convidados",
+          name: "Categorias",
+          submenuRoute: "/categoria",
         },
      
       ],

@@ -33,7 +33,7 @@ export default function Alert() {
         {alert.class === "error" && (
           <Error color="error" style={{ fontSize: "2.5rem", padding: "8px" }}  />
         )}
-        <Typography color="secondary.dark" alignItems="center" fontSize="20px">
+        <Typography variant="subtitle1" alignItems="center" >
           {alert.msg}
         </Typography>
       </Box>

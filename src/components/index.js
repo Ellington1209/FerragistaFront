@@ -3,10 +3,10 @@ import Notify from './Notify/Notify';
 import Alert from "./Alert/Alert";
 import Confirm from "./Confirm/Confirm";
 import AvatarAppBar  from "./Menu-Lateral/AppBar/AppBar";
-
+import TableComponet from "./TableComponent/TableCompnent";
 
 
 
 export{
-    Loading, Notify, Alert, Confirm, AvatarAppBar
+    Loading, Notify, Alert, Confirm, AvatarAppBar, TableComponet
 }

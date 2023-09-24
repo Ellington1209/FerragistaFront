@@ -71,7 +71,7 @@ const Ligth = createTheme({
            color:grey[200]
         },
         subtitle1: {
-          fontWeight: 600,
+          fontWeight: 200,
           fontSize: '1.6rem',
            color:grey[200]
         },

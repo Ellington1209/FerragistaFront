@@ -31,7 +31,7 @@ export default function Notify() {
             <SnackbarContent
                 className={`${classes[notify.class]} d-flex justify-content-center`}
                 message={
-                    <Typography display='flex' align='center'>{notify.msg}</Typography>
+                    <Typography variant='subtitle1' display='flex' align='center'>{notify.msg}</Typography>
                 }
             />
         </Snackbar>
