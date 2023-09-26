@@ -1,8 +1,9 @@
 import Axios from "axios";
 import { getToken } from "../utils/AuthHelp";
+import { rootUrl } from "./App";
 
 
-export const rootUrl = "http://127.0.0.1:8000/";
+
 //export const rootUrl = `https://${window.location.hostname}:443/`;
 
 export const Http = Axios.create({

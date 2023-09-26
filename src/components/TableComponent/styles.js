@@ -7,7 +7,7 @@ export const Container = styled.div`
     
   }
 .MuiTableCell-root{
-  color: ${grey[800]};
+ 
   font-size:  20px !important;
 }
 .MuiTablePagination-selectLabel {
