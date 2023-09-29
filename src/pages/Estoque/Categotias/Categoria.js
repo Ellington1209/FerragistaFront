@@ -65,6 +65,7 @@ export default function Categoria() {
             msg: "Categoria adicionada com sucesso!",
           })
         );
+        window.location.reload();
       })
       .catch((error) => {
         dispatch(changeloading({ open: false }));

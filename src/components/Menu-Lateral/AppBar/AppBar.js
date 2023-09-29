@@ -8,7 +8,7 @@ import MuiAppBar from "@mui/material/AppBar";
 
 import { connect } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { logoutRemoveToken } from "../../../utils/AuthHelp";
+import { logoutRemoveToken } from "../../../utilities/utils/AuthHelp";
 
 import { ConfirmationNumber, SingleBedOutlined } from "@mui/icons-material";
 

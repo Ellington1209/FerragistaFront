@@ -3,7 +3,7 @@ import { BrowserRouter } from "react-router-dom";
 import { AppRoutes } from './routers/router';
 import { Provider } from "react-redux";
 import GlobalStyles from "./themes/Global"
-import './utils/TraducoesYup'
+import { TraducoesYup } from "./utilities";
 
 
 

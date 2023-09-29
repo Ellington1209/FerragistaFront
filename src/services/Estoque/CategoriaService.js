@@ -15,7 +15,7 @@ class CategoriaService {
 
     await Http.get("/api/categoria").then((response) => {
       res = response.data;   
-     
+  
      
     });
     return res;
@@ -38,6 +38,17 @@ class CategoriaService {
     };
   
     await Http.put(`/api/categoria/${id}`, data).then((response) => {
+      res = response.data;
+    });
+  
+    return res;
+  }
+
+  static async DeleteCategorias(id) {
+    let res = null;
+  
+
+    await Http.delete(`/api/categoria/${id}`).then((response) => {
       res = response.data;
     });
   

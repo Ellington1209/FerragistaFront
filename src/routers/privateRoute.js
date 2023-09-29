@@ -1,7 +1,7 @@
 import React from 'react';
 import { Navigate } from 'react-router-dom';
 import Menu from '../menu';
-import { isAuthenticated } from '../utils/AuthHelp'
+import { isAuthenticated } from '../utilities/utils/AuthHelp'
 
 
 

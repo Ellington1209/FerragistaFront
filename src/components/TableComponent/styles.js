@@ -1,16 +1,35 @@
-import { grey } from '@mui/material/colors';
+import { grey } from '@mui/material/colors'
 import styled from 'styled-components'
 
 export const Container = styled.div`
   .MuiTableContainer-root {
-    box-shadow: none;
-    
+    //box-shadow: none;
+    // border: 1px solid transparent;
   }
-.MuiTableCell-root{
- 
-  font-size:  20px !important;
-}
-.MuiTablePagination-selectLabel {
+
+  border: 1px solid transparent;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+
+  div table tbody tr th,
+  div table tbody tr td {
+    font-size: 12px;
+  }
+
+  div table thead tr th {
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  div table thead {
+    background-color: rgba(0, 0, 0, 0.03);
+  }
+
+  div table tfoot tr td div p,
+  div table tfoot tr td div button {
+    font-size: 10px;
+  }
+  .MuiTablePagination-selectLabel {
   color: ${grey[800]};
 }
 .MuiTablePagination-menuItem{
@@ -20,9 +39,4 @@ export const Container = styled.div`
   color: ${grey[800]};
 }
 
- 
-  table tbody tr td {
-    font-size: 16px !important;
-    
-  }
-`;
+`

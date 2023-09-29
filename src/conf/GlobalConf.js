@@ -1,5 +1,5 @@
 import Axios from "axios";
-import { getToken } from "../utils/AuthHelp";
+import { getToken } from "../utilities/utils/AuthHelp";
 import { rootUrl } from "./App";
 
 
