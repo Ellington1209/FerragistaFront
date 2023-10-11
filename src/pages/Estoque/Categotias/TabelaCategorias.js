@@ -197,7 +197,7 @@ export default function TabelaCategorias() {
   return (
     <>
       <TableContainer>
-        {/* //  <TableComponet headers={headers} rows={rowsWithActions} /> */}
+      
         <TableComponet
           headers={headers}
           data={categorias}

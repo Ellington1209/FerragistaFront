@@ -12,7 +12,7 @@ export const Http = Axios.create({
 
 Http.interceptors.request.use(async (config) => {
   const token = getToken();
-  config.headers["Content-Type"]= 'application/json'
+  //config.headers["Content-Type"]= 'application/json'
   if (token) {
     config.headers.Authorization = `Bearer ${token}`;
   }

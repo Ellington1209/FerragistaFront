@@ -62,7 +62,7 @@ export default function Categoria() {
           changeNotify({
             open: true,
             class: "success",
-            msg: "Categoria adicionada com sucesso!",
+            msg: data.message
           })
         );
         window.location.reload();
@@ -73,7 +73,7 @@ export default function Categoria() {
           changeNotify({
             open: true,
             class: "error",
-            msg: "Erro ao cadastrar Categoria!",
+            msg: error.message
           })
         );
       });

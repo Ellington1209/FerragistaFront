@@ -14,7 +14,7 @@ class UserDataService {
     let res = null;
 
     await Http.get("/api/user").then((response) => {
-      console.log(response)
+      
       res = response.data;
     });
     return res;
